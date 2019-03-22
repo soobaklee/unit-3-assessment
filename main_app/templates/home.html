@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<h1>Wish List Items</h1>
+
+<table>
+    <tr>
+        <th>Description</th>
+        <th>Quantity</th>
+    </tr>
+    <tbody>
+            {% for item in items %}
+        <tr>
+            <td>{{item.description}}</td>
+        <td>{{item.quantity}}</td>
+    </tr>
+    {% empty %}
+    <h3>No Wish Items Yet!</h3>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+<hr>
+
+<a href="{% url 'wish_create' %}"><button>Add Wish</button></a>
+
+{% endblock %}
