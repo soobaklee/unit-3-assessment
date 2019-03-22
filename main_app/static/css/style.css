@@ -3,6 +3,11 @@ body {
     margin: 2rem;
 }
 
+h1 {
+    color: black;
+    text-shadow: 3px 3px lightblue;
+}
+
 table {
     text-align: center;
     border: 1px solid black;
